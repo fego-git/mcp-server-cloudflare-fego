@@ -1,0 +1,33 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": "src/dns-management.app.ts",
+  "compatibility_date": "2025-03-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "name": "mcp-cloudflare-dns-management-dev",
+  "migrations": [
+    { "new_sqlite_classes": ["DNSManagementMCP"], "tag": "v1" }
+  ],
+  "observability": { "enabled": true },
+  "durable_objects": {
+    "bindings": [
+      { "name": "MCP_OBJECT", "class_name": "DNSManagementMCP" },
+      { "name": "USER_DETAILS", "class_name": "UserDetails" }
+    ]
+  },
+  "routes": [],
+  "env": {
+    "production": {
+      "kv_namespaces": [
+        { "binding": "OAUTH_KV", "id": "753f27a19ef94d7dbd49de05588ca890" }
+      ],
+      "vars": {
+        "ENVIRONMENT": "production",
+        "MCP_SERVER_NAME": "dns-management",
+        "MCP_SERVER_VERSION": "1.0.0"
+      },
+      "analytics_engine_datasets": [
+        { "binding": "MCP_METRICS", "dataset": "mcp-metrics-production" }
+      ]
+    }
+  }
+}
