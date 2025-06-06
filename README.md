@@ -20,6 +20,8 @@ The following servers are included in this repository:
 | [**AutoRAG server**](/apps/autorag)                            | List and search documents on your AutoRAGs                                                      | `https://autorag.mcp.cloudflare.com/sse`       |
 | [**Audit Logs server**](/apps/auditlogs)                       | Query audit logs and generate reports for review                                                | `https://auditlogs.mcp.cloudflare.com/sse`     |
 | [**DNS Analytics server**](/apps/dns-analytics)                | Optimize DNS performance and debug issues based on current set up                               | `https://dns-analytics.mcp.cloudflare.com/sse` |
+| [**DNS Management server**](/apps/dns-management)              | Manage DNS records (add, update, delete)
+| `https://dns-management.mcp.cloudflare.com/sse` |
 | [**Digital Experience Monitoring server**](/apps/dex-analysis) | Get quick insight on critical applications for your organization                                | `https://dex.mcp.cloudflare.com/sse`           |
 | [**Cloudflare One CASB server**](/apps/cloudflare-one-casb)    | Quickly identify any security misconfigurations for SaaS applications to safeguard users & data | `https://casb.mcp.cloudflare.com/sse`          |
 | [**GraphQL server**](/apps/graphql/)                           | Get analytics data using Cloudflare’s GraphQL API                                               | `https://graphql.mcp.cloudflare.com/sse`       |
